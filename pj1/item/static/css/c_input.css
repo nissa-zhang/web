@@ -1,0 +1,140 @@
+
+#img1{  
+    position: absolute;
+      TOP: 20px; 
+      LEFT: 150px; 
+      WIDTH: 150px; 
+      HEIGHT: 40px;
+}
+
+h2#h21{
+  position: absolute; 
+    TOP: 20px; 
+    LEFT: 325px; 
+    WIDTH: 450px; 
+    HEIGHT: 50px;
+    background-color: #f6f6f6;
+    padding: .1em .75em;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+}
+
+.w3-content w3-section{
+    max-width:1000;
+    width:100%;
+    align:left;
+}
+
+
+main{
+  height: 100vh;
+  width: 100%;
+}
+
+main p{
+  font-size: 16px;
+  line-height: 1.8em;
+  padding-left: 20px;
+  max-width: 500px;
+}
+.card text-center{
+    position: absolute; 
+    TOP: 20px; 
+    LEFT: 125px; 
+    WIDTH: 300px;
+    HEIGHT: 500px
+}
+
+
+   
+}
+
+dialog {
+  position: relative;
+  width: 500px;
+  padding: 50px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 0;
+  padding: 0;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  animation: modal-open .4s ease;
+}
+
+dialog[open] {
+  animation: modal-slide .5s ease;
+}
+
+
+
+.modal-contents{
+  padding: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.modal-footer{
+  padding: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.open {
+  margin-top: 40px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  background: #007bbb;
+  font-size: 14px;
+  border: 1px solid #007bbb;
+  color: #fff;
+  letter-spacing: .2px;
+  outline: none;
+  transition: background .2s ease, color .2s ease;
+}
+
+.open:hover {
+  color: #007bbb;
+  background-color: transparent;
+}
+
+.close{
+  color: #fff;
+  cursor: pointer;
+  font-size: 40px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+@keyframes modal-open {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes modal-slide {
+  0% {
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.mt20{
+  margin-top: 20px;
+}
+
+
+
+

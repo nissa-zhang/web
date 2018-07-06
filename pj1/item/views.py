@@ -77,6 +77,7 @@ def csrf_failure(request, reason=''):
     return render(request,'403_csrf.html', c)
 
 # 演習8
+
 def confirm(request):
     p1 = request.POST['p1']
     request.session['p1'] = p1

@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <title>IOT_Python画像解析アプリ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
   <link href="/static/css/c_input.css" rel="stylesheet">
@@ -19,10 +18,16 @@
 </head>
 
 <body>
+  <div>
+    <img id="img1" src="/static/item/fitec.png" alt=""/ >
+
+
+    <h2 id="h21">IOT_Python画像解析アプリ</h2>
+  <div/>
 
   <div class="container">
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:20px">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:100px">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -49,13 +54,14 @@
       </a>
     </div>
 
-    <div style="margin-top: 30px;">
+
+    <div style="margin-top: 30px;margin-left: -15px;">
       <form class="form-inline">
         <div class="form-group mx-sm-3 mb-2">
           <label for="username" class="sr-only">名前入力:</label>
           <input type="text" class="form-control" id="username" name="username" placeholder="名前入力:">
         </div>
-        <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#exampleModal">提出</button>
+        <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#exampleModal">送信</button>
       </form>
     </div>
 
@@ -72,12 +78,14 @@
               </button>
             </div>
             <div class="modal-body">
-              <strong id="nameConfirm"></strong> は正しいですか？
+              <strong id="nameexcute"></strong> はよろしいですか？
             </div>
             <input id="p1" name="p1" type="hidden" />
             <div class="modal-footer">
+              <form method="post" action="execute">
+               {% csrf_token %}
               <button type="button" class="btn btn-secondary" data-dismiss="modal">修正</button>
-              <button type="submit" class="btn btn-primary">撮影開始</button>
+              <button type="submit" class="btn btn-primary">はい</button>
             </div>
           </div>
         </div>
@@ -89,7 +97,8 @@
   <script>
   $('#exampleModal').on('shown.bs.modal', function () {
     var username = $("#username").val();
-    $("#nameConfirm").text(username);
+    $("#nameexcute").text(username);
+    $("#nameresult").text(username);
     $("#p1").val(username);
   })
   </script>
@@ -97,3 +106,4 @@
 </body>
 
 </html>
+
