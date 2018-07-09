@@ -93,5 +93,13 @@ def mozaiku(request):
     request.session['p1'] = p1
     return render(request, 'c_mozaiku.html')
 def tamp(request):
-    return render(request, 'tamplate.html')
+    return render(request, 'template1.html')
 
+def brightup(request):
+    p1 = request.session['p1']
+    request.session['p1'] = p1
+    return render(request, 'c_brightup.html')
+def gray(request):
+    p1 = request.session['p1']
+    request.session['p1'] = p1
+    return render(request, 'c_gray.html')

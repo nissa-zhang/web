@@ -13,6 +13,8 @@ urlpatterns = [
     # 演習8
     url(r'^calc/confirm$', views.confirm, name='calc_con'),
     url(r'^calc/mozaiku$', views.mozaiku, name='calc_mozaiku'),
-    url(r'^calc/tamp$', views.tamp, name='calc_tamp'),
-
+    url(r'^calc/temp$', views.tamp, name='calc_temp'),
+    url(r'^calc/brightup$', views.tamp, name='calc_brightup'),
+    url(r'^calc/gray$', views.tamp, name='calc_gray'),
+    url(r'^calc/tt$', views.tamp, name='calc_tt'),
 ]

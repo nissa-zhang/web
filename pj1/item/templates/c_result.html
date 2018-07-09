@@ -18,13 +18,15 @@
 
 
 <body>
-<div class="card text-center" style="left: 12rem;width: 36rem;HEIGHT: 36rem;">
+<div class="card text-center" style="left: 24rem;width: 36rem;HEIGHT: 36rem;">
   <div class="card-body">
     <h4 class="card-title">名前: </h4>
-    <p class="card-text"><h4>{{ request.session.p1 }} </h4><br></p>
+    <p class="card-text"><h4>{{ p1 }} </h4><br></p>
     {% load static %}
-    <img src="{% static key1 %}" alt="syainphoto2">
+    <img src="/static/item/cam4.jpg" alt="syainphoto2">
     <div form method="post" action="mozaiku">
+    <div form method="post" action="brightup">
+    <div form method="post" action="gray">
       {% csrf_token %}
 
     </form>
@@ -36,7 +38,14 @@
 {% csrf_token %}
 <input type="submit" a href="#" class="btn btn-primary" value="モザイク"/>
 </form>
-
+<form method="post" action="brightup" >
+{% csrf_token %}
+<input type="submit" a href="#" class="btn btn-primary" value="brightup"/>
+</form>
+<form method="post" action="gray" >
+{% csrf_token %}
+<input type="submit" a href="#" class="btn btn-primary" value="gray"/>
+</form>
 
 </body>
 </html>
